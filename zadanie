@@ -1,0 +1,20 @@
+function getRandomColor() {
+            let hex = '123456789abcdef';
+            let hexColor = '#';
+            for (let i = 0; i < 6; i++) {
+                hexColor += hex[Math.floor(Math.random() * 16)];
+            }
+            return hexColor;}
+
+            const color = document.querySelector(".color");
+            const btn = document.getElementById("btn");
+    
+            document.body.style.backgroundColor = getRandomColor()
+            color.textContent = getRandomColor();
+            
+            
+            btn.addEventListener('click', function() {
+                let randomNum = getRandomColor();
+                document.body.style.backgroundColor = randomNum;
+                color.textContent = randomNum;             
+            });
